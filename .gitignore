@@ -1,0 +1,19 @@
+# Obsidian — локальные настройки
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Установщики и архивы
+*.exe
+*.msi
+*.zip
+
+# G-code и результаты слайсинга
+*.gcode
+*.gco
+*.bgcode
+
+# Временные файлы
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
