@@ -1,0 +1,1209 @@
++ echo 'Install zmod!'
+Install zmod!
++ install_prepare
++ pwd
++ zdir=/
++ cd /usr/data/update/mod/
++ md5sum -c md5sum.list
+rootfs.tar.xz: OK
+version.txt: OK
+mod.tar.xz: OK
+klipper.tar.xz: OK
+moonraker.tar.xz: OK
+recommend.tar.xz: OK
+g28_tenz.tar.xz: OK
+timelapse.tar.xz: OK
+notify.tar.xz: OK
+helixscreen-ad5x.zip: OK
+ifs_jacker.tar.xz: OK
+dryer.tar.xz: OK
+lesswaste.tar.xz: OK
+bambufy.tar.xz: OK
++ cd /
++ cat /usr/data/update/mod/version.txt
+1.7.5
++ echo 'Test Machine'
+Test Machine
++ '[' AD5X '!=' AD5X ]
++ '[' 0026 '!=' 0026 ]
++ uname -m
++ '[' mips '!=' mips ]
++ install_ssh
++ '[' '!' -f /usr/prog/etc/passwd ]
++ mount /usr/prog/etc /etc
++ sync
++ date 2024.01.01-00:00:00
+Mon Jan  1 00:00:00 UTC 2024
++ yes root
++ passwd
+Changing password for root
+New password: 
+Bad password: too short
+Retype password: 
+passwd: password for root changed by root
++ sync
++ umount /etc
++ sync
++ install_audio
++ echo 'Install audio'
+Install audio
++ mkdir -p /usr/data/config/mod_data/midi/
++ sync
++ install_mod
++ echo 'Install mod'
+Install mod
++ mount
+/dev/root on / type squashfs (ro,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=242404k,nr_inodes=55666,mode=755)
+tmpfs on /dev type tmpfs (rw,relatime)
+proc on /proc type proc (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=666)
+tmpfs on /dev/shm type tmpfs (rw,relatime,mode=777)
+tmpfs on /tmp type tmpfs (rw,relatime)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,relatime,mode=755)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/mmcblk0p6 on /usr/prog type ext4 (rw,sync,relatime)
+/dev/mmcblk0p7 on /usr/data type ext4 (rw,sync,relatime)
+none on /sys/kernel/config type configfs (rw,relatime)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/sda1 on /mnt type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=936,iocharset=utf8,shortname=mixed,errors=remount-ro)
++ ps
+  PID USER       VSZ STAT COMMAND
+    1 root      3132 S    {linuxrc} init
+    2 root         0 SW   [kthreadd]
+    3 root         0 IW<  [rcu_gp]
+    4 root         0 IW<  [rcu_par_gp]
+    5 root         0 IW   [kworker/0:0-rcu]
+    6 root         0 IW<  [kworker/0:0H-ev]
+    7 root         0 IW   [kworker/u4:0-ev]
+    8 root         0 IW<  [mm_percpu_wq]
+    9 root         0 SW   [rcu_tasks_kthre]
+   10 root         0 SW   [ksoftirqd/0]
+   11 root         0 IW   [rcu_preempt]
+   12 root         0 SW   [migration/0]
+   13 root         0 IW   [kworker/0:1-eve]
+   14 root         0 SW   [cpuhp/0]
+   15 root         0 SW   [cpuhp/1]
+   16 root         0 SW   [migration/1]
+   17 root         0 SW   [ksoftirqd/1]
+   18 root         0 IW   [kworker/1:0-mm_]
+   19 root         0 IW<  [kworker/1:0H-mm]
+   20 root         0 SW   [kdevtmpfs]
+   21 root         0 IW   [kworker/u4:1-fl]
+   23 root         0 IW   [kworker/1:1-eve]
+   59 root         0 IW   [kworker/u4:2-ev]
+  290 root         0 SW   [khungtaskd]
+  291 root         0 SW   [oom_reaper]
+  292 root         0 IW<  [writeback]
+  322 root         0 IW<  [kintegrityd]
+  323 root         0 IW<  [kblockd]
+  424 root         0 SW   [watchdogd]
+  507 root         0 IW<  [kworker/0:1H-kb]
+  509 root         0 IW<  [cfg80211]
+  518 root         0 SW   [kswapd0]
+  542 root         0 IW   [kworker/0:2-eve]
+  569 root         0 IW<  [felix-vdec]
+  574 root         0 IW<  [kworker/u5:0]
+  575 root         0 IW<  [sdhci]
+  576 root         0 SW   [irq/45-mmc0]
+  581 root         0 IW   [kworker/0:3-rcu]
+  640 root         0 IW<  [mmc_complete]
+  648 root         0 IW<  [kworker/1:1H-kb]
+  649 root         0 IW   [kworker/1:2-rcu]
+  663 root         0 IW   [kworker/1:3-pm]
+  675 root      3132 S    {rcS} /bin/sh /etc/init.d/rcS
+  685 root      3548 S    /sbin/mdev -df
+  730 root         0 IW<  [kworker/1:2H-kb]
+  735 root         0 SW   [scsi_eh_0]
+  736 root         0 IW<  [scsi_tmf_0]
+  738 root         0 SW   [usb-storage]
+  743 root         0 IW<  [kworker/0:2H-mm]
+  745 root         0 SW   [jbd2/mmcblk0p6-]
+  746 root         0 IW<  [ext4-rsv-conver]
+  820 root         0 IW<  [fb_work]
+  828 root         0 IW<  [aic_work]
+  931 root         0 SW   [jbd2/mmcblk0p7-]
+  932 root         0 IW<  [ext4-rsv-conver]
+  951 root         0 IW   [kworker/u4:3-fl]
+  955 dbus      3244 S    dbus-daemon --system
+  981 root      2556 S    /sbin/dhcpcd -f /etc/dhcpcd.conf
+  992 root      2828 S    /usr/sbin/dropbear -R
+ 1005 root      3132 S    {adbserver.sh} /bin/sh /sbin/adbserver.sh 440
+ 1006 root      3132 S    {exe} ash /etc/init.d/S99factory_test_shell start
+ 1009 root     32916 S    adbd
+ 1010 root      3132 S    {app_startup.sh} /bin/sh /usr/prog/app_startup.sh
+ 1060 root      3132 S    {flashforge_init} /bin/sh /usr/data/update/flashforg
+ 1084 root      3288 R    ps
++ mount
++ grep zmod
++ PREMOD=/usr/data/.mod/
++ rm -rf /usr/data/.mod/
++ sync
++ mkdir -p /usr/data/.mod/
++ df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root                12800     12800         0 100% /
+devtmpfs                242548         0    242548   0% /dev
+tmpfs                   242548         0    242548   0% /dev
+tmpfs                   242548         0    242548   0% /dev/shm
+tmpfs                   242548         8    242540   0% /tmp
+tmpfs                   242548        28    242520   0% /run
+/dev/mmcblk0p6          996780    713680    214288  77% /usr/prog
+/dev/mmcblk0p7         5933884    335592   5275940   6% /usr/data
+/dev/sda1             30395344    225648  30169696   1% /mnt
++ mount
+/dev/root on / type squashfs (ro,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=242404k,nr_inodes=55666,mode=755)
+tmpfs on /dev type tmpfs (rw,relatime)
+proc on /proc type proc (rw,relatime)
+devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=666)
+tmpfs on /dev/shm type tmpfs (rw,relatime,mode=777)
+tmpfs on /tmp type tmpfs (rw,relatime)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,relatime,mode=755)
+sysfs on /sys type sysfs (rw,relatime)
+/dev/mmcblk0p6 on /usr/prog type ext4 (rw,sync,relatime)
+/dev/mmcblk0p7 on /usr/data type ext4 (rw,sync,relatime)
+none on /sys/kernel/config type configfs (rw,relatime)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/sda1 on /mnt type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=936,iocharset=utf8,shortname=mixed,errors=remount-ro)
++ /sbin/fdisk -l /dev/mmcblk0
+Found valid GPT with protective MBR; using GPT
+
+Disk /dev/mmcblk0: 15269888 sectors, 3360M
+Logical sector size: 512
+Disk identifier (GUID): 42753f48-263d-b377-b91a-90ee1791f464
+Partition table holds up to 8 entries
+First usable sector is 34, last usable sector is 15065087
+
+Number  Start (sector)    End (sector)  Size Name
+     1            2048           18431 8192K kernel
+     2           18432          223231  100M rootfs
+     3          223232          239615 8192K kernel2
+     4          239616          444415  100M rootfs2
+     5          444416          446463 1024K ota
+     6          446464         2543615 1024M usershare
+     7         2543616        14782463 5976M userdata
++ df /usr/data
++ cut '-d ' -f4
++ tail -1
++ tr -s ' '
++ FREE_SPACE=5275940
++ MIN_SPACE=524228
++ '[' 5275940 -lt 524228 ]
++ df /usr/prog
++ cut '-d ' -f4
++ tr -s ' '
++ tail -1
++ FREE_SPACE=214288
++ MIN_SPACE=52422
++ '[' 214288 -lt 52422 ]
++ MOD=/usr/data/.mod/.zmod
++ mkdir -p /usr/data/.mod/.zmod
++ xz -dc /usr/data/update/mod/rootfs.tar.xz
++ tar -xf - -C /usr/data/.mod/.zmod
++ sync
++ mkdir -p /usr/data/.mod/.zmod/opt/config
++ mkdir -p /usr/data/config/mod_data/database/
++ rm -f /usr/data/config/heater_bed.txt
++ rm -rf /usr/data/config/mod /usr/data/config/base/ /usr/data/zmod/klipper /usr/data/zmod/moonraker /usr/data/zmod/zmod /usr/data/config/moonraker.conf /usr/data/config/mod_data/plugins/recommend/ /usr/data/config/mod_data/plugins/g28_tenz/ /usr/data/config/mod_data/plugins/timelapse/ /usr/data/config/mod_data/plugins/notify/
++ mkdir -p /usr/data/zmod/zmod/ /usr/data/zmod/klipper /usr/data/zmod/moonraker /usr/data/config/mod /usr/data/config/mod_data/plugins/recommend/ /usr/data/config/mod_data/plugins/g28_tenz/ /usr/data/config/mod_data/plugins/timelapse/ /usr/data/config/mod_data/plugins/notify/
++ xz -dc /usr/data/update/mod/mod.tar.xz
++ tar -xf - -C /usr/data/zmod/zmod/
++ xz -dc /usr/data/update/mod/klipper.tar.xz
++ tar -xf - -C /usr/data/zmod/klipper/
++ xz -dc /usr/data/update/mod/moonraker.tar.xz
++ tar -xf - -C /usr/data/zmod/moonraker/
++ xz -dc /usr/data/update/mod/recommend.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/recommend/
++ xz -dc /usr/data/update/mod/g28_tenz.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/g28_tenz/
++ xz -dc /usr/data/update/mod/timelapse.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/timelapse/
++ xz -dc /usr/data/update/mod/notify.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/notify/
++ '[' -f /usr/data/update/mod/bambufy.tar.xz ]
++ mkdir -p /usr/data/config/mod_data/plugins/bambufy/
++ xz -dc /usr/data/update/mod/bambufy.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/bambufy/
++ '[' -f /usr/data/update/mod/lesswaste.tar.xz ]
++ mkdir -p /usr/data/config/mod_data/plugins/lesswaste/
++ xz -dc /usr/data/update/mod/lesswaste.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/lesswaste/
++ '[' -f /usr/data/update/mod/dryer.tar.xz ]
++ mkdir -p /usr/data/config/mod_data/plugins/dryer/
++ xz -dc /usr/data/update/mod/dryer.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/dryer/
++ '[' -f /usr/data/update/mod/ifs_jacker.tar.xz ]
++ mkdir -p /usr/data/config/mod_data/plugins/ifs_jacker/
++ xz -dc /usr/data/update/mod/ifs_jacker.tar.xz
++ tar -xf - -C /usr/data/config/mod_data/plugins/ifs_jacker/
++ '[' -f /usr/data/update/mod/helixscreen-ad5x.zip ]
++ mkdir -p /usr/data/.mod/.zmod/srv/helixscreen/
++ cd /usr/data/.mod/.zmod/srv/helixscreen/
++ unzip /usr/data/update/mod/helixscreen-ad5x.zip
+Archive:  /usr/data/update/mod/helixscreen-ad5x.zip
+   creating: bin/
+  inflating: bin/helix-splash
+  inflating: bin/helix-launcher.sh
+  inflating: bin/helix-screen
+  inflating: bin/helix-watchdog
+   creating: moonraker-plugin/
+  inflating: moonraker-plugin/helix_print.py
+  inflating: moonraker-plugin/README.md
+  inflating: moonraker-plugin/remote-install.sh
+  inflating: moonraker-plugin/install.sh
+   creating: scripts/
+  inflating: scripts/uninstall.sh
+   creating: scripts/kiauh/
+  inflating: scripts/kiauh/README.md
+   creating: scripts/kiauh/tests/
+  inflating: scripts/kiauh/tests/__init__.py
+  inflating: scripts/kiauh/tests/test_kiauh_extension.py
+   creating: scripts/kiauh/helixscreen/
+  inflating: scripts/kiauh/helixscreen/__init__.py
+  inflating: scripts/kiauh/helixscreen/metadata.json
+  inflating: scripts/kiauh/helixscreen/helixscreen_extension.py
+   creating: config/
+  inflating: config/qidi-3mf-thumbs-units.sh
+   creating: config/themes/
+  inflating: config/themes/nord.json
+  inflating: config/qidi_3mf_thumbs.py
+  inflating: config/helixscreen-update.path
+  inflating: config/helixscreen-network.pkla
+  inflating: config/helixscreen-update.service
+  inflating: config/helixscreen-3mf-thumbs.path
+  inflating: config/99-helixscreen-backlight.rules
+  inflating: config/99-helixscreen-usb-printers.rules
+  inflating: config/k2-webserver.init
+  inflating: config/helixscreen-ustreamer-k2.sh
+  inflating: config/settings.json.template
+   creating: config/klipper_includes/
+  inflating: config/klipper_includes/sovol_sv06_ace.cfg
+  inflating: config/helixscreen.service
+  inflating: config/helixscreen.init
+  inflating: config/helixscreen-3mf-thumbs.service
+  inflating: config/helixscreen.env
+   creating: config/printer_database.d/
+  inflating: config/printer_database.d/README.md
+  inflating: config/refresh-service-units.sh
+  inflating: config/settings.json
+  inflating: config/ensure-polkit-rule.sh
+  inflating: config/helixscreen-k2-procd-shim.sh
+   creating: certs/
+  inflating: certs/ca-certificates.crt
+   creating: assets/
+   creating: assets/zoneinfo/
+   creating: assets/zoneinfo/Pacific/
+  inflating: assets/zoneinfo/Pacific/Honolulu
+  inflating: assets/zoneinfo/Pacific/Auckland
+  inflating: assets/zoneinfo/Pacific/Fiji
+  inflating: assets/zoneinfo/Pacific/Pago_Pago
+  inflating: assets/zoneinfo/Pacific/Noumea
+  inflating: assets/zoneinfo/Pacific/Tongatapu
+   creating: assets/zoneinfo/Atlantic/
+  inflating: assets/zoneinfo/Atlantic/Cape_Verde
+  inflating: assets/zoneinfo/Atlantic/Azores
+  inflating: assets/zoneinfo/Atlantic/Reykjavik
+  inflating: assets/zoneinfo/UTC
+   creating: assets/zoneinfo/Asia/
+  inflating: assets/zoneinfo/Asia/Jerusalem
+  inflating: assets/zoneinfo/Asia/Karachi
+  inflating: assets/zoneinfo/Asia/Kolkata
+  inflating: assets/zoneinfo/Asia/Shanghai
+  inflating: assets/zoneinfo/Asia/Singapore
+  inflating: assets/zoneinfo/Asia/Ho_Chi_Minh
+  inflating: assets/zoneinfo/Asia/Dubai
+  inflating: assets/zoneinfo/Asia/Taipei
+  inflating: assets/zoneinfo/Asia/Hong_Kong
+  inflating: assets/zoneinfo/Asia/Colombo
+  inflating: assets/zoneinfo/Asia/Dhaka
+  inflating: assets/zoneinfo/Asia/Yangon
+  inflating: assets/zoneinfo/Asia/Tokyo
+  inflating: assets/zoneinfo/Asia/Tehran
+  inflating: assets/zoneinfo/Asia/Jakarta
+  inflating: assets/zoneinfo/Asia/Seoul
+  inflating: assets/zoneinfo/Asia/Bangkok
+  inflating: assets/zoneinfo/Asia/Manila
+  inflating: assets/zoneinfo/Asia/Kabul
+  inflating: assets/zoneinfo/Asia/Kathmandu
+  inflating: assets/zoneinfo/Asia/Riyadh
+   creating: assets/zoneinfo/America/
+  inflating: assets/zoneinfo/America/Halifax
+  inflating: assets/zoneinfo/America/Denver
+  inflating: assets/zoneinfo/America/Caracas
+  inflating: assets/zoneinfo/America/St_Johns
+   creating: assets/zoneinfo/America/Argentina/
+  inflating: assets/zoneinfo/America/Argentina/Buenos_Aires
+  inflating: assets/zoneinfo/America/Regina
+  inflating: assets/zoneinfo/America/Bogota
+  inflating: assets/zoneinfo/America/Mexico_City
+  inflating: assets/zoneinfo/America/Santiago
+  inflating: assets/zoneinfo/America/Chicago
+  inflating: assets/zoneinfo/America/Phoenix
+  inflating: assets/zoneinfo/America/Sao_Paulo
+  inflating: assets/zoneinfo/America/Los_Angeles
+  inflating: assets/zoneinfo/America/Anchorage
+  inflating: assets/zoneinfo/America/Noronha
+  inflating: assets/zoneinfo/America/New_York
+   creating: assets/zoneinfo/Europe/
+  inflating: assets/zoneinfo/Europe/Moscow
+  inflating: assets/zoneinfo/Europe/London
+  inflating: assets/zoneinfo/Europe/Berlin
+  inflating: assets/zoneinfo/Europe/Istanbul
+  inflating: assets/zoneinfo/Europe/Bucharest
+   creating: assets/zoneinfo/Africa/
+  inflating: assets/zoneinfo/Africa/Nairobi
+  inflating: assets/zoneinfo/Africa/Lagos
+  inflating: assets/zoneinfo/Africa/Johannesburg
+  inflating: assets/zoneinfo/Africa/Cairo
+   creating: assets/zoneinfo/Australia/
+  inflating: assets/zoneinfo/Australia/Adelaide
+  inflating: assets/zoneinfo/Australia/Sydney
+  inflating: assets/zoneinfo/Australia/Brisbane
+  inflating: assets/zoneinfo/Australia/Perth
+  inflating: assets/zoneinfo/Australia/Darwin
+   creating: assets/images/
+  inflating: assets/images/printer_200.png
+  inflating: assets/images/helixscreen-logo-3d-dark.png
+  inflating: assets/images/orcaslicer test cube.PNG
+  inflating: assets/images/filament_spool.png
+  inflating: assets/images/README-gradient.md
+   creating: assets/images/flags/
+  inflating: assets/images/flags/flag_en.png
+  inflating: assets/images/flags/flag_es.png
+  inflating: assets/images/flags/flag_it.bin
+  inflating: assets/images/flags/flag_zh.bin
+  inflating: assets/images/flags/flag_de.png
+  inflating: assets/images/flags/flag_zh.png
+  inflating: assets/images/flags/flag_pt.png
+  inflating: assets/images/flags/flag_pt.bin
+  inflating: assets/images/flags/flag_it.png
+  inflating: assets/images/flags/flag_de.bin
+  inflating: assets/images/flags/flag_ja.bin
+  inflating: assets/images/flags/flag_ru.bin
+  inflating: assets/images/flags/flag_es.bin
+  inflating: assets/images/flags/flag_fr.png
+  inflating: assets/images/flags/flag_fr.bin
+  inflating: assets/images/flags/flag_ru.png
+  inflating: assets/images/flags/flag_ja.png
+  inflating: assets/images/flags/flag_en.bin
+  inflating: assets/images/helixscreen-alt-logo.png
+  inflating: assets/images/large-extruder-icon.svg
+   creating: assets/images/printers/
+  inflating: assets/images/printers/creality-ender-5-max.png
+  inflating: assets/images/printers/anycubic-kobra-s1.png
+  inflating: assets/images/printers/anycubic-kobra-3.png
+  inflating: assets/images/printers/sovol-zero.png
+  inflating: assets/images/printers/sovol-sv06.png
+  inflating: assets/images/printers/flsun-delta.png
+  inflating: assets/images/printers/zerog-hydra-370.png
+  inflating: assets/images/printers/creality-ender-3-v3-ke.png
+  inflating: assets/images/printers/qidi-q2.png
+  inflating: assets/images/printers/kingroon-klp1.png
+  inflating: assets/images/printers/zerog-nebula.png
+  inflating: assets/images/printers/creality-cr10.png
+  inflating: assets/images/printers/sovol-sv08-max.png
+  inflating: assets/images/printers/pfa-stealthfork.png
+  inflating: assets/images/printers/anycubic-kobra-3-max.png
+  inflating: assets/images/printers/flashforge-adventurer-5m.png
+  inflating: assets/images/printers/anycubic-kobra-2-pro.png
+  inflating: assets/images/printers/flashforge-adventurer-5m-pro.png
+  inflating: assets/images/printers/sovol-sv07.png
+  inflating: assets/images/printers/ducr10.png
+  inflating: assets/images/printers/anycubic-chiron.png
+  inflating: assets/images/printers/elegoo-neptune-4.png
+  inflating: assets/images/printers/elegoo-centauri-carbon.png
+  inflating: assets/images/printers/sovol-sv06-ace.png
+  inflating: assets/images/printers/README.md
+  inflating: assets/images/printers/qidi-x-max-3.png
+  inflating: assets/images/printers/creality-k2-pro.png
+  inflating: assets/images/printers/rh3d-e3ng.png
+  inflating: assets/images/printers/anycubic-kobra-2.png
+  inflating: assets/images/printers/anycubic-i3-mega.png
+  inflating: assets/images/printers/prusawire.png
+  inflating: assets/images/printers/geralcom_x500.png
+  inflating: assets/images/printers/anycubic-kobra-2-max.png
+  inflating: assets/images/printers/anycubic-vyper.png
+  inflating: assets/images/printers/geralcom_x400.png
+  inflating: assets/images/printers/qidi-plus-4.png
+  inflating: assets/images/printers/creality-ender-5.png
+  inflating: assets/images/printers/voron-v0.png
+  inflating: assets/images/printers/ratrig-vcore4.png
+  inflating: assets/images/printers/pfa-micron.png
+  inflating: assets/images/printers/qidi-q1-pro.png
+  inflating: assets/images/printers/qidi-max-4.png
+  inflating: assets/images/printers/anycubic-kobra-3-v2.png
+  inflating: assets/images/printers/creality-k1.png
+  inflating: assets/images/printers/creality-hi.png
+  inflating: assets/images/printers/flashforge-adventurer-5x.png
+  inflating: assets/images/printers/duender.png
+  inflating: assets/images/printers/ratrig-vminion.png
+  inflating: assets/images/printers/sovol-sv06-plus-ace.png
+  inflating: assets/images/printers/voron-legacy.png
+  inflating: assets/images/printers/artillery-m1-pro.png
+  inflating: assets/images/printers/artillery-genius-pro.png
+  inflating: assets/images/printers/anycubic-kobra-s1-max.png
+  inflating: assets/images/printers/prusa-mk4.png
+  inflating: assets/images/printers/creality-k2-plus.png
+  inflating: assets/images/printers/venture-delta.png
+  inflating: assets/images/printers/anycubic-kobra.png
+  inflating: assets/images/printers/generic-corexy.png
+  inflating: assets/images/printers/creality-k1-se.png
+  inflating: assets/images/printers/creality-k1c.png
+  inflating: assets/images/printers/qidi-x-plus-3.png
+  inflating: assets/images/printers/ratrig-vcore3.png
+  inflating: assets/images/printers/voron-switchwire.png
+  inflating: assets/images/printers/voron-v2.png
+  inflating: assets/images/printers/sovol-sv08.png
+  inflating: assets/images/printers/creality-ender-3.png
+  inflating: assets/images/printers/snapmaker-u1.png
+  inflating: assets/images/printers/infimech-tx.png
+  inflating: assets/images/printers/voron-trident.png
+   creating: assets/images/printers/prerendered/
+  inflating: assets/images/printers/prerendered/sovol-sv08-max-300.bin
+  inflating: assets/images/printers/prerendered/sovol-sv08-max-150.bin
+  inflating: assets/images/printers/prerendered/creality-k1c-300.bin
+  inflating: assets/images/printers/prerendered/ducr10-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-3-v2-300.bin
+  inflating: assets/images/printers/prerendered/anet-et5-pro-300.bin
+  inflating: assets/images/printers/prerendered/creality-k1-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-300.bin
+  inflating: assets/images/printers/prerendered/creality-k2-pro-150.bin
+  inflating: assets/images/printers/prerendered/creality-k2-plus-150.bin
+  inflating: assets/images/printers/prerendered/creality-ender-3-v3-ke-300.bin
+  inflating: assets/images/printers/prerendered/zerog-nebula-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-s1-300.bin
+  inflating: assets/images/printers/prerendered/artillery-m1-pro-150.bin
+  inflating: assets/images/printers/prerendered/infimech-tx-150.bin
+  inflating: assets/images/printers/prerendered/flashforge-adventurer-5x-150.bin
+  inflating: assets/images/printers/prerendered/zerog-hydra-370-150.bin
+  inflating: assets/images/printers/prerendered/sovol-sv06-ace-150.bin
+  inflating: assets/images/printers/prerendered/venture-delta-150.bin
+  inflating: assets/images/printers/prerendered/flashforge-adventurer-5m-pro-150.bin
+  inflating: assets/images/printers/prerendered/qidi-x-smart-3-300.bin
+  inflating: assets/images/printers/prerendered/creality-hi-300.bin
+  inflating: assets/images/printers/prerendered/zerog-hydra-255-150.bin
+  inflating: assets/images/printers/prerendered/zerog-nebula-370-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-vyper-300.bin
+  inflating: assets/images/printers/prerendered/artillery-genius-pro-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-chiron-300.bin
+  inflating: assets/images/printers/prerendered/creality-hi-150.bin
+  inflating: assets/images/printers/prerendered/creality-ender-5-max-150.bin
+  inflating: assets/images/printers/prerendered/creality-k1-se-150.bin
+  inflating: assets/images/printers/prerendered/creality-k1-max-300.bin
+  inflating: assets/images/printers/prerendered/creality-ender-3-v3-ke-150.bin
+  inflating: assets/images/printers/prerendered/ratrig-vcore4-300.bin
+  inflating: assets/images/printers/prerendered/sovol-sv08-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-i3-mega-300.bin
+  inflating: assets/images/printers/prerendered/anet-et5-pro-150.bin
+  inflating: assets/images/printers/prerendered/prusa-mk4-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-3-max-150.bin
+  inflating: assets/images/printers/prerendered/doron_velta-150.bin
+  inflating: assets/images/printers/prerendered/creality-k1-se-300.bin
+  inflating: assets/images/printers/prerendered/voron-legacy-150.bin
+  inflating: assets/images/printers/prerendered/voron-v2-150.bin
+  inflating: assets/images/printers/prerendered/pfa-micron-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-3-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-2-150.bin
+  inflating: assets/images/printers/prerendered/rh3d-e3ng-150.bin
+  inflating: assets/images/printers/prerendered/qidi-x-plus-3-150.bin
+  inflating: assets/images/printers/prerendered/sovol-sv06-ace-300.bin
+  inflating: assets/images/printers/prerendered/ratrig-vcore3-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-2-max-300.bin
+  inflating: assets/images/printers/prerendered/ratrig-vcore4-150.bin
+  inflating: assets/images/printers/prerendered/creality-k1-150.bin
+  inflating: assets/images/printers/prerendered/sovol-sv08-300.bin
+  inflating: assets/images/printers/prerendered/elegoo-neptune-4-150.bin
+  inflating: assets/images/printers/prerendered/duender-150.bin
+  inflating: assets/images/printers/prerendered/zerog-nebula-300.bin
+  inflating: assets/images/printers/prerendered/zerog-hydra-255-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-2-300.bin
+  inflating: assets/images/printers/prerendered/ducr10-150.bin
+  inflating: assets/images/printers/prerendered/elegoo-centauri-carbon-150.bin
+  inflating: assets/images/printers/prerendered/geralcom_x400-300.bin
+  inflating: assets/images/printers/prerendered/creality-k2-pro-300.bin
+  inflating: assets/images/printers/prerendered/creality-ender-3-300.bin
+  inflating: assets/images/printers/prerendered/artillery-m1-pro-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-2-pro-150.bin
+  inflating: assets/images/printers/prerendered/artillery-genius-pro-300.bin
+  inflating: assets/images/printers/prerendered/sovol-sv07-300.bin
+  inflating: assets/images/printers/prerendered/qidi-q2-150.bin
+  inflating: assets/images/printers/prerendered/creality-ender-5-300.bin
+  inflating: assets/images/printers/prerendered/flsun-delta-300.bin
+  inflating: assets/images/printers/prerendered/doron_velta-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-2-max-150.bin
+  inflating: assets/images/printers/prerendered/creality-ender-5-150.bin
+  inflating: assets/images/printers/prerendered/creality-ender-3-150.bin
+  inflating: assets/images/printers/prerendered/generic-corexy-150.bin
+  inflating: assets/images/printers/prerendered/sovol-sv07-150.bin
+  inflating: assets/images/printers/prerendered/ratrig-vminion-150.bin
+  inflating: assets/images/printers/prerendered/pfa-micron-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-150.bin
+  inflating: assets/images/printers/prerendered/creality-k2-plus-300.bin
+  inflating: assets/images/printers/prerendered/qidi-x-max-3-150.bin
+  inflating: assets/images/printers/prerendered/flashforge-adventurer-5m-pro-300.bin
+  inflating: assets/images/printers/prerendered/snapmaker-u1-150.bin
+  inflating: assets/images/printers/prerendered/qidi-q1-pro-150.bin
+  inflating: assets/images/printers/prerendered/voron-trident-150.bin
+  inflating: assets/images/printers/prerendered/elegoo-centauri-carbon-300.bin
+  inflating: assets/images/printers/prerendered/prusa-mk4-300.bin
+  inflating: assets/images/printers/prerendered/qidi-q1-pro-300.bin
+  inflating: assets/images/printers/prerendered/sovol-zero-150.bin
+  inflating: assets/images/printers/prerendered/kingroon-klp1-150.bin
+  inflating: assets/images/printers/prerendered/pfa-stealthfork-300.bin
+  inflating: assets/images/printers/prerendered/qidi-x-smart-3-150.bin
+  inflating: assets/images/printers/prerendered/sovol-sv06-150.bin
+  inflating: assets/images/printers/prerendered/sovol-sv06-300.bin
+  inflating: assets/images/printers/prerendered/voron-v0-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-s1-150.bin
+  inflating: assets/images/printers/prerendered/elegoo-neptune-4-300.bin
+  inflating: assets/images/printers/prerendered/flashforge-adventurer-5m-150.bin
+  inflating: assets/images/printers/prerendered/flashforge-adventurer-5m-300.bin
+  inflating: assets/images/printers/prerendered/sovol-zero-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-3-max-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-3-150.bin
+  inflating: assets/images/printers/prerendered/geralcom_x500-300.bin
+  inflating: assets/images/printers/prerendered/qidi-max-4-300.bin
+  inflating: assets/images/printers/prerendered/pfa-stealthfork-150.bin
+  inflating: assets/images/printers/prerendered/geralcom_x400-150.bin
+  inflating: assets/images/printers/prerendered/lemontron-300.bin
+  inflating: assets/images/printers/prerendered/creality-cr10-150.bin
+  inflating: assets/images/printers/prerendered/venture-delta-300.bin
+  inflating: assets/images/printers/prerendered/ratrig-vcore3-300.bin
+  inflating: assets/images/printers/prerendered/generic-corexy-300.bin
+  inflating: assets/images/printers/prerendered/voron-v0-300.bin
+  inflating: assets/images/printers/prerendered/qidi-plus-4-150.bin
+  inflating: assets/images/printers/prerendered/prusawire-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-i3-mega-150.bin
+  inflating: assets/images/printers/prerendered/lemontron-150.bin
+  inflating: assets/images/printers/prerendered/rh3d-e3ng-300.bin
+  inflating: assets/images/printers/prerendered/snapmaker-u1-300.bin
+  inflating: assets/images/printers/prerendered/duender-300.bin
+  inflating: assets/images/printers/prerendered/flashforge-adventurer-5x-300.bin
+  inflating: assets/images/printers/prerendered/qidi-x-plus-3-300.bin
+  inflating: assets/images/printers/prerendered/sovol-sv06-plus-ace-150.bin
+  inflating: assets/images/printers/prerendered/prusawire-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-s1-max-300.bin
+  inflating: assets/images/printers/prerendered/ratrig-vminion-300.bin
+  inflating: assets/images/printers/prerendered/qidi-plus-4-300.bin
+  inflating: assets/images/printers/prerendered/creality-cr10-300.bin
+  inflating: assets/images/printers/prerendered/infimech-tx-300.bin
+  inflating: assets/images/printers/prerendered/flsun-delta-150.bin
+  inflating: assets/images/printers/prerendered/zerog-hydra-370-300.bin
+  inflating: assets/images/printers/prerendered/qidi-q2-300.bin
+  inflating: assets/images/printers/prerendered/kingroon-klp1-300.bin
+  inflating: assets/images/printers/prerendered/qidi-max-4-150.bin
+  inflating: assets/images/printers/prerendered/zerog-nebula-370-150.bin
+  inflating: assets/images/printers/prerendered/geralcom_x500-150.bin
+  inflating: assets/images/printers/prerendered/voron-switchwire-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-vyper-150.bin
+  inflating: assets/images/printers/prerendered/voron-trident-300.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-2-pro-300.bin
+  inflating: assets/images/printers/prerendered/creality-ender-5-max-300.bin
+  inflating: assets/images/printers/prerendered/voron-v2-300.bin
+  inflating: assets/images/printers/prerendered/creality-k1c-150.bin
+  inflating: assets/images/printers/prerendered/qidi-x-max-3-300.bin
+  inflating: assets/images/printers/prerendered/voron-legacy-300.bin
+  inflating: assets/images/printers/prerendered/sovol-sv06-plus-ace-300.bin
+  inflating: assets/images/printers/prerendered/creality-k1-max-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-s1-max-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-kobra-3-v2-150.bin
+  inflating: assets/images/printers/prerendered/voron-switchwire-150.bin
+  inflating: assets/images/printers/prerendered/anycubic-chiron-150.bin
+  inflating: assets/images/printers/lemontron.png
+  inflating: assets/images/printers/creality-k1-max.png
+  inflating: assets/images/printers/zerog-nebula-370.png
+  inflating: assets/images/printers/qidi-x-smart-3.png
+  inflating: assets/images/printers/zerog-hydra-255.png
+  inflating: assets/images/printers/anet-et5-pro.png
+  inflating: assets/images/printers/doron_velta.png
+  inflating: assets/images/helixscreen-logo.png
+  inflating: assets/images/helix-icon-64.png
+   creating: assets/images/screensaver/
+  inflating: assets/images/screensaver/toast.png
+  inflating: assets/images/screensaver/toaster_0.png
+  inflating: assets/images/screensaver/toaster_2.png
+  inflating: assets/images/screensaver/toaster_3.png
+  inflating: assets/images/screensaver/toaster_1.png
+  inflating: assets/images/printer_400.png
+  inflating: assets/images/helix-icon-256.png
+  inflating: assets/images/helix-icon-128.png
+   creating: assets/images/ams/
+  inflating: assets/images/ams/3ms_64.png
+  inflating: assets/images/ams/night_owl_64.png
+  inflating: assets/images/ams/mmx.svg
+  inflating: assets/images/ams/spoolman_24.png
+  inflating: assets/images/ams/night_owl.svg
+  inflating: assets/images/ams/happy_hare_64.png
+  inflating: assets/images/ams/3ms.svg
+  inflating: assets/images/ams/quattro_box_64.png
+  inflating: assets/images/ams/box_turtle_64.png
+  inflating: assets/images/ams/README.md
+  inflating: assets/images/ams/kms.svg
+  inflating: assets/images/ams/afc_512.png
+  inflating: assets/images/ams/kms_64.png
+  inflating: assets/images/ams/box_turtle.svg
+  inflating: assets/images/ams/tradrack.svg
+  inflating: assets/images/ams/ercf_64.png
+  inflating: assets/images/ams/btt_vivid.svg
+  inflating: assets/images/ams/ercf.svg
+  inflating: assets/images/ams/quattro_box.svg
+  inflating: assets/images/ams/happy_hare_512.png
+  inflating: assets/images/ams/tradrack_64.png
+  inflating: assets/images/ams/btt_vivid_64.png
+  inflating: assets/images/ams/afc_64.png
+  inflating: assets/images/ams/mmx_64.png
+  inflating: assets/images/ams/spoolman_64.png
+  inflating: assets/images/folder-up.png
+  inflating: assets/images/about-logo.bin
+  inflating: assets/images/thumbnail-gradient-bg.png
+  inflating: assets/images/folder.png
+  inflating: assets/images/helix-icon.png
+  inflating: assets/images/large-extruder-icon.png
+   creating: assets/images/prerendered/
+  inflating: assets/images/prerendered/splash-logo-tiny.bin
+  inflating: assets/images/prerendered/splash-3d-light-large.bin
+  inflating: assets/images/prerendered/splash-3d-dark-medium.bin
+  inflating: assets/images/prerendered/splash-3d-light-ultrawide.bin
+  inflating: assets/images/prerendered/splash-3d-dark-tiny.bin
+  inflating: assets/images/prerendered/splash-3d-dark-small.bin
+  inflating: assets/images/prerendered/splash-logo-medium.bin
+  inflating: assets/images/prerendered/splash-3d-light-small.bin
+  inflating: assets/images/prerendered/splash-3d-light-tiny.bin
+  inflating: assets/images/prerendered/splash-logo-large.bin
+  inflating: assets/images/prerendered/splash-3d-light-tiny_alt.bin
+  inflating: assets/images/prerendered/splash-logo-small.bin
+  inflating: assets/images/prerendered/splash-3d-dark-large.bin
+  inflating: assets/images/prerendered/splash-3d-light-medium.bin
+  inflating: assets/images/prerendered/splash-3d-dark-ultrawide.bin
+  inflating: assets/images/prerendered/benchy_thumbnail_white.bin
+  inflating: assets/images/prerendered/splash-3d-dark-tiny_alt.bin
+  inflating: assets/images/printer.png
+  inflating: assets/images/helixscreen-logo-3d-light.png
+  inflating: assets/images/benchy_thumbnail_white.png
+   creating: assets/config/
+   creating: assets/config/themes/
+   creating: assets/config/themes/defaults/
+  inflating: assets/config/themes/defaults/dracula.json
+  inflating: assets/config/themes/defaults/gruvbox.json
+  inflating: assets/config/themes/defaults/catppuccin.json
+  inflating: assets/config/themes/defaults/chatgpt.json
+  inflating: assets/config/themes/defaults/nord.json
+  inflating: assets/config/themes/defaults/yami.json
+  inflating: assets/config/themes/defaults/solarized.json
+  inflating: assets/config/themes/defaults/cupertino.json
+  inflating: assets/config/themes/defaults/everforest.json
+  inflating: assets/config/themes/defaults/onedark.json
+  inflating: assets/config/themes/defaults/rose-pine.json
+  inflating: assets/config/themes/defaults/midnight.json
+  inflating: assets/config/themes/defaults/ayu.json
+  inflating: assets/config/themes/defaults/material-design.json
+  inflating: assets/config/themes/defaults/tokyonight.json
+  inflating: assets/config/themes/defaults/kanagawa.json
+  inflating: assets/config/themes/defaults/helixscreen.json
+  inflating: assets/config/themes/defaults/hazard.json
+   creating: assets/config/print_start_profiles/
+  inflating: assets/config/print_start_profiles/creality_k2.json
+  inflating: assets/config/print_start_profiles/creality_k1.json
+  inflating: assets/config/print_start_profiles/anycubic_kobra.json
+  inflating: assets/config/print_start_profiles/default.json
+  inflating: assets/config/print_start_profiles/snapmaker_u1.json
+  inflating: assets/config/print_start_profiles/ad5m.json
+  inflating: assets/config/print_start_profiles/anycubic_kobra_s1.json
+  inflating: assets/config/print_start_profiles/forge_x.json
+  inflating: assets/config/print_start_profiles/cosmos_cc1.json
+  inflating: assets/config/print_start_profiles/qidi.json
+  inflating: assets/config/print_start_profiles/artillery_m1.json
+   creating: assets/config/panel_widgets/
+   creating: assets/config/panel_widgets/ad5x_zmod/
+  inflating: assets/config/panel_widgets/ad5x_zmod/home.json
+   creating: assets/config/panel_widgets/cc1/
+  inflating: assets/config/panel_widgets/cc1/home.json
+   creating: assets/config/panel_widgets/ad5x/
+  inflating: assets/config/panel_widgets/ad5x/home.json
+  inflating: assets/config/printer_database.json
+  inflating: assets/config/printing_tips.json
+   creating: assets/config/presets/
+  inflating: assets/config/presets/anycubic_kobra_3_max.json
+  inflating: assets/config/presets/ad5m_pro_zmod.json
+  inflating: assets/config/presets/ad5x.json
+  inflating: assets/config/presets/qidi_q2.json
+  inflating: assets/config/presets/README.md
+  inflating: assets/config/presets/ad5m_pro_forgex.json
+  inflating: assets/config/presets/qidi_max4.json
+  inflating: assets/config/presets/anycubic_kobra_s1_max.json
+  inflating: assets/config/presets/flsun_t1.json
+  inflating: assets/config/presets/artillery-m1-pro.json
+  inflating: assets/config/presets/k1.json
+  inflating: assets/config/presets/cc1.json
+  inflating: assets/config/presets/ad5m_forgex.json
+  inflating: assets/config/presets/snapmaker_u1.json
+  inflating: assets/config/presets/ad5m.json
+  inflating: assets/config/presets/k1c.json
+  inflating: assets/config/presets/ad5m_zmod.json
+  inflating: assets/config/presets/anycubic_kobra_s1.json
+  inflating: assets/config/presets/hi.json
+  inflating: assets/config/presets/anycubic_kobra_3.json
+  inflating: assets/config/presets/ad5m_pro.json
+  inflating: assets/config/presets/voron-v2-afc.json
+  inflating: assets/config/presets/sovol_sv06_ace.json
+  inflating: assets/config/presets/k2.json
+  inflating: assets/config/presets/anycubic_kobra_2_pro.json
+  inflating: assets/config/default_layout.json
+   creating: assets/config/platform/
+  inflating: assets/config/platform/hooks-k2.sh
+  inflating: assets/config/platform/hooks-ad5m-zmod.sh
+  inflating: assets/config/platform/hooks-k1.sh
+  inflating: assets/config/platform/hooks-snapmaker-u1.sh
+  inflating: assets/config/platform/hooks-cc1.sh
+  inflating: assets/config/platform/hooks-ad5m-forgex.sh
+  inflating: assets/config/platform/hooks-ad5x.sh
+  inflating: assets/config/platform/hooks-ad5m-kmod.sh
+  inflating: assets/config/platform/hooks-m1.sh
+  inflating: assets/config/platform/hooks-pi.sh
+  inflating: assets/config/helix_macros.cfg
+   creating: assets/config/sounds/
+  inflating: assets/config/sounds/default.json
+  inflating: assets/config/sounds/crocketts_theme.json
+  inflating: assets/config/sounds/retro.json
+  inflating: assets/config/sounds/minimal.json
+  inflating: assets/config/sounds/miami_vice.json
+   creating: assets/sounds/
+  inflating: assets/sounds/space_debris.mod
+  inflating: assets/sounds/crocketts_theme.mod
+  inflating: assets/sounds/crocketts_theme.med
+  inflating: assets/sounds/elysium.mod
+  inflating: assets/filaments.json
+   creating: assets/fonts/
+   creating: assets/fonts/cjk/
+  inflating: assets/fonts/cjk/.cjk_codepoints.manifest
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_14.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_40.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_20.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_26.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_18.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_16.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_24.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_14.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_16.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_20.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_24.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_10.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_26.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_18.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_8.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_10.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_40.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_32.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_32.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_12.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_20.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_11.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_16.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_18.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_bold_28.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_14.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_11.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_light_12.bin
+  inflating: assets/fonts/cjk/noto_sans_cjk_28.bin
+  inflating: release_info.json
+   creating: ui_xml/
+  inflating: ui_xml/humidity_indicator.xml
+  inflating: ui_xml/printer_type_overlay.xml
+  inflating: ui_xml/job_queue_modal.xml
+  inflating: ui_xml/led_control_overlay.xml
+  inflating: ui_xml/memory_stats_overlay.xml
+  inflating: ui_xml/machine_limits_overlay.xml
+  inflating: ui_xml/advanced_panel.xml
+  inflating: ui_xml/width_indicator.xml
+  inflating: ui_xml/wizard_fan_select.xml
+  inflating: ui_xml/runout_guidance_modal.xml
+   creating: ui_xml/components/
+  inflating: ui_xml/components/panel_widget_camera.xml
+  inflating: ui_xml/components/lock_screen.xml
+  inflating: ui_xml/components/panel_widget_clog_detection.xml
+  inflating: ui_xml/components/nozzle_icon.xml
+  inflating: ui_xml/components/filament_mapping_more_pill.xml
+  inflating: ui_xml/components/panel_widget_thermistor.xml
+  inflating: ui_xml/components/ipp_print_modal.xml
+  inflating: ui_xml/components/panel_widget_macros.xml
+  inflating: ui_xml/components/belt_result_card.xml
+  inflating: ui_xml/components/panel_widget_shutdown.xml
+  inflating: ui_xml/components/temp_graph_config_modal.xml
+  inflating: ui_xml/components/print_status_detailed_active.xml
+  inflating: ui_xml/components/helix_progress_arc.xml
+  inflating: ui_xml/components/exclude_object_side_list.xml
+  inflating: ui_xml/components/panel_widget_active_spool.xml
+  inflating: ui_xml/components/filament_catalog_picker.xml
+  inflating: ui_xml/components/print_status_detailed_idle.xml
+  inflating: ui_xml/components/buffer_status_modal.xml
+  inflating: ui_xml/components/bed_mesh_canvas_band.xml
+  inflating: ui_xml/components/panel_widget_print_stats.xml
+  inflating: ui_xml/components/temp_card_unified.xml
+  inflating: ui_xml/components/panel_widget_job_queue.xml
+  inflating: ui_xml/components/context_menu_card.xml
+  inflating: ui_xml/components/panel_widget_nozzle_temps.xml
+  inflating: ui_xml/components/panel_widget_led.xml
+  inflating: ui_xml/components/print_status_preview_card.xml
+  inflating: ui_xml/components/panel_widget_tool_switcher.xml
+  inflating: ui_xml/components/panel_widget_clock.xml
+  inflating: ui_xml/components/panel_widget_fan.xml
+  inflating: ui_xml/components/clog_detection_config_modal.xml
+  inflating: ui_xml/components/panel_widget_lock.xml
+  inflating: ui_xml/components/ams_unit_detail.xml
+  inflating: ui_xml/components/panel_widget_fan_carousel.xml
+  inflating: ui_xml/components/panel_widget_temp_carousel.xml
+  inflating: ui_xml/components/panel_widget_power_device.xml
+  inflating: ui_xml/components/compact_toggle_row.xml
+  inflating: ui_xml/components/panel_widget_thermistor_carousel.xml
+  inflating: ui_xml/components/filament_catalog_add_row.xml
+  inflating: ui_xml/components/camera_config_modal.xml
+  inflating: ui_xml/components/tool_picker_button.xml
+  inflating: ui_xml/components/color_swatch_grid.xml
+  inflating: ui_xml/components/panel_widget_temperature.xml
+  inflating: ui_xml/components/panel_widget_network.xml
+  inflating: ui_xml/components/preview_stack.xml
+  inflating: ui_xml/components/upgrade_banner.xml
+  inflating: ui_xml/components/panel_widget_ams.xml
+  inflating: ui_xml/components/preflight_check_tool_row.xml
+  inflating: ui_xml/components/spaghetti_detection_modal.xml
+  inflating: ui_xml/components/panel_widget_motion.xml
+  inflating: ui_xml/components/nozzle_temp_row.xml
+  inflating: ui_xml/components/panel_widget_firmware_restart.xml
+  inflating: ui_xml/components/panel_widget_bypass.xml
+  inflating: ui_xml/components/clog_meter_page.xml
+  inflating: ui_xml/components/print_status_fan_row.xml
+  inflating: ui_xml/components/motion_position_card.xml
+  inflating: ui_xml/components/heater_icon.xml
+  inflating: ui_xml/components/panel_widget_control_buttons.xml
+  inflating: ui_xml/components/theme_swatch_grid.xml
+  inflating: ui_xml/components/perf_metric_row.xml
+  inflating: ui_xml/components/ams_environment_indicator.xml
+  inflating: ui_xml/components/panel_widget_width_sensor.xml
+  inflating: ui_xml/components/panel_widget_printer_image.xml
+  inflating: ui_xml/components/panel_widget_filament.xml
+  inflating: ui_xml/components/afc_fault_path.xml
+  inflating: ui_xml/components/filament_catalog_row.xml
+  inflating: ui_xml/components/panel_widget_bed_temperature.xml
+  inflating: ui_xml/components/filament_swatch.xml
+  inflating: ui_xml/components/ams_endless_status.xml
+  inflating: ui_xml/components/bed_mesh_profiles_card.xml
+  inflating: ui_xml/components/panel_widget_preheat.xml
+  inflating: ui_xml/components/ams_loaded_card.xml
+  inflating: ui_xml/components/bed_mesh_current_mesh_card.xml
+  inflating: ui_xml/components/nozzle_temp_bed_row.xml
+  inflating: ui_xml/components/power_device_energy_page.xml
+  inflating: ui_xml/components/panel_widget_temp_stack.xml
+  inflating: ui_xml/components/panel_widget_led_controls.xml
+  inflating: ui_xml/components/camera_fullscreen.xml
+  inflating: ui_xml/components/pin_entry_modal.xml
+  inflating: ui_xml/components/panel_widget_gcode_console.xml
+  inflating: ui_xml/components/panel_widget_temp_graph.xml
+  inflating: ui_xml/components/filament_mapping_tool_row.xml
+  inflating: ui_xml/components/page_scroll_gutter.xml
+  inflating: ui_xml/components/panel_widget_fan_stack.xml
+  inflating: ui_xml/components/panel_widget_humidity.xml
+  inflating: ui_xml/components/panel_widget_chamber_temperature.xml
+  inflating: ui_xml/components/preflight_check_modal.xml
+  inflating: ui_xml/components/exclude_object_map.xml
+  inflating: ui_xml/components/filament_catalog_selector.xml
+  inflating: ui_xml/components/panel_widget_print_status.xml
+  inflating: ui_xml/components/context_menu_backdrop.xml
+  inflating: ui_xml/components/progress_bar.xml
+  inflating: ui_xml/components/barcode_scanner_device_row.xml
+  inflating: ui_xml/components/ams_sidebar.xml
+  inflating: ui_xml/components/filament_slot_picker_row.xml
+  inflating: ui_xml/components/panel_widget_favorite_macro.xml
+  inflating: ui_xml/components/panel_widget_tips.xml
+  inflating: ui_xml/components/panel_widget_notifications.xml
+  inflating: ui_xml/form_field.xml
+  inflating: ui_xml/filament_mapping_modal.xml
+  inflating: ui_xml/ams_environment_overlay.xml
+  inflating: ui_xml/modal_header.xml
+  inflating: ui_xml/toast_notification.xml
+  inflating: ui_xml/factory_reset_modal.xml
+  inflating: ui_xml/notification_history_panel.xml
+  inflating: ui_xml/timelapse_video_card.xml
+  inflating: ui_xml/settings_printing_overlay.xml
+  inflating: ui_xml/motion_panel.xml
+  inflating: ui_xml/wizard_language_chooser.xml
+  inflating: ui_xml/humidity_sensor_row.xml
+  inflating: ui_xml/fan_control_overlay.xml
+  inflating: ui_xml/abort_progress_modal.xml
+  inflating: ui_xml/setting_action_row.xml
+  inflating: ui_xml/settings_display_sound_overlay.xml
+  inflating: ui_xml/wizard_led_select.xml
+  inflating: ui_xml/wizard_connection.xml
+  inflating: ui_xml/file_list_gen.cmake
+  inflating: ui_xml/wizard_filament_sensor_select.xml
+  inflating: ui_xml/fan_settings_row.xml
+  inflating: ui_xml/status_pill.xml
+  inflating: ui_xml/print_file_card.xml
+  inflating: ui_xml/console_settings_overlay.xml
+  inflating: ui_xml/bed_temp_panel.xml
+  inflating: ui_xml/probe_overlay.xml
+  inflating: ui_xml/color_picker.xml
+  inflating: ui_xml/header_bar.xml
+  inflating: ui_xml/plugin_install_modal.xml
+  inflating: ui_xml/restart_prompt_dialog.xml
+  inflating: ui_xml/settings_safety_overlay.xml
+  inflating: ui_xml/calibration_zoffset_panel.xml
+  inflating: ui_xml/hardware_issue_row.xml
+  inflating: ui_xml/spoolman_spool_item.xml
+  inflating: ui_xml/print_tune_panel.xml
+  inflating: ui_xml/setting_toggle_row.xml
+  inflating: ui_xml/probe_indicator.xml
+  inflating: ui_xml/.gitignore
+  inflating: ui_xml/bed_mesh_save_config_modal.xml
+  inflating: ui_xml/fan_arc_core.xml
+   creating: ui_xml/translations/
+  inflating: ui_xml/translations/zh.xml
+  inflating: ui_xml/translations/ru.xml
+  inflating: ui_xml/translations/en.xml
+  inflating: ui_xml/translations/translations.xml
+  inflating: ui_xml/translations/fr.xml
+  inflating: ui_xml/translations/es.xml
+  inflating: ui_xml/translations/de.xml
+  inflating: ui_xml/translations/ja.xml
+  inflating: ui_xml/translations/it.xml
+  inflating: ui_xml/translations/pt.xml
+  inflating: ui_xml/network_settings_overlay.xml
+  inflating: ui_xml/probe_eddy_panel.xml
+  inflating: ui_xml/save_z_offset_modal.xml
+  inflating: ui_xml/print_select_panel.xml
+  inflating: ui_xml/centered_column.xml
+  inflating: ui_xml/ams_overview_panel.xml
+  inflating: ui_xml/setting_value_field.xml
+  inflating: ui_xml/action_prompt_modal.xml
+  inflating: ui_xml/led_settings_overlay.xml
+  inflating: ui_xml/tour_tooltip_card.xml
+  inflating: ui_xml/ui_xml_gen.h
+  inflating: ui_xml/wizard_vendor_row.xml
+  inflating: ui_xml/wizard_container.xml
+  inflating: ui_xml/spoolman_context_menu.xml
+  inflating: ui_xml/divider_vertical.xml
+  inflating: ui_xml/debug_bundle_modal.xml
+  inflating: ui_xml/ui_multiselect.xml
+  inflating: ui_xml/gcode_tokens.xml
+  inflating: ui_xml/wizard_printer_identify.xml
+  inflating: ui_xml/nozzle_temp_panel.xml
+  inflating: ui_xml/spool_wizard.xml
+  inflating: ui_xml/bed_mesh_calibrate_modal.xml
+  inflating: ui_xml/update_download_modal.xml
+  inflating: ui_xml/estop_confirmation_dialog.xml
+  inflating: ui_xml/telemetry_data_overlay.xml
+  inflating: ui_xml/wizard_input_shaper.xml
+  inflating: ui_xml/ams_selector_menu.xml
+  inflating: ui_xml/retraction_settings_overlay.xml
+  inflating: ui_xml/ams_tokens.xml
+  inflating: ui_xml/bed_mesh_rename_modal.xml
+  inflating: ui_xml/setting_slider_row.xml
+  inflating: ui_xml/macro_card.xml
+  inflating: ui_xml/ams_edit_overlay.xml
+  inflating: ui_xml/print_tune_tokens.xml
+  inflating: ui_xml/ui_xml.c
+  inflating: ui_xml/shutdown_modal.xml
+  inflating: ui_xml/accel_sensor_row.xml
+  inflating: ui_xml/update_notify_modal.xml
+  inflating: ui_xml/print_status_configure_picker.xml
+  inflating: ui_xml/sound_preview_overlay.xml
+  inflating: ui_xml/ams_panel.xml
+  inflating: ui_xml/fan_picker.xml
+  inflating: ui_xml/create_vendor_modal.xml
+  inflating: ui_xml/wizard_wifi_setup.xml
+  inflating: ui_xml/telemetry_info_modal.xml
+  inflating: ui_xml/calibration_pid_panel.xml
+  inflating: ui_xml/fan_settings_overlay.xml
+  inflating: ui_xml/beta_feature.xml
+  inflating: ui_xml/overlay_backdrop.xml
+  inflating: ui_xml/printer_list_overlay.xml
+  inflating: ui_xml/material_temps_overlay.xml
+  inflating: ui_xml/step_progress_tokens.xml
+  inflating: ui_xml/info_note.xml
+  inflating: ui_xml/probe_config_edit_modal.xml
+  inflating: ui_xml/network_test_modal.xml
+  inflating: ui_xml/settings_system_overlay.xml
+  inflating: ui_xml/create_filament_modal.xml
+  inflating: ui_xml/theme_preview_overlay.xml
+  inflating: ui_xml/printer_manager_overlay.xml
+  inflating: ui_xml/screws_tilt_share_modal.xml
+  inflating: ui_xml/probe_beacon_panel.xml
+  inflating: ui_xml/setting_form_dropdown.xml
+  inflating: ui_xml/wizard_touch_calibration.xml
+  inflating: ui_xml/wizard_summary.xml
+  inflating: ui_xml/plugin_card.xml
+  inflating: ui_xml/probe_sensor_row.xml
+  inflating: ui_xml/printer_switch_menu.xml
+  inflating: ui_xml/settings_hardware_overlay.xml
+  inflating: ui_xml/timelapse_install_overlay.xml
+  inflating: ui_xml/console_panel.xml
+  inflating: ui_xml/barcode_scanner_settings.xml
+  inflating: ui_xml/beta_badge.xml
+  inflating: ui_xml/setting_info_row.xml
+  inflating: ui_xml/wizard_filament_row.xml
+  inflating: ui_xml/print_status_panel.xml
+  inflating: ui_xml/probe_cartographer_panel.xml
+  inflating: ui_xml/print_file_list_row.xml
+  inflating: ui_xml/info_qr_modal.xml
+  inflating: ui_xml/printer_image_list_item.xml
+  inflating: ui_xml/print_cancel_confirm_modal.xml
+  inflating: ui_xml/hardware_health_overlay.xml
+  inflating: ui_xml/hidden_network_modal.xml
+  inflating: ui_xml/timelapse_videos_overlay.xml
+  inflating: ui_xml/power_device_row.xml
+  inflating: ui_xml/filament_sensor_row.xml
+  inflating: ui_xml/spoolman_spool_row.xml
+  inflating: ui_xml/setting_group_header.xml
+  inflating: ui_xml/probe_generic_panel.xml
+  inflating: ui_xml/settings_touch_overlay.xml
+  inflating: ui_xml/bed_mesh_panel.xml
+  inflating: ui_xml/settings_help_overlay.xml
+  inflating: ui_xml/history_detail_overlay.xml
+  inflating: ui_xml/app_layout.xml
+  inflating: ui_xml/ams_device_operations.xml
+  inflating: ui_xml/ams_current_tool.xml
+  inflating: ui_xml/divider_horizontal.xml
+  inflating: ui_xml/modal_button_row.xml
+  inflating: ui_xml/filament_panel.xml
+  inflating: ui_xml/width_sensor_row.xml
+  inflating: ui_xml/theme_save_as_modal.xml
+  inflating: ui_xml/fan_status_card.xml
+  inflating: ui_xml/spoolman_edit_modal.xml
+   creating: ui_xml/micro/
+  inflating: ui_xml/micro/.gitkeep
+  inflating: ui_xml/micro/header_bar.xml
+  inflating: ui_xml/micro/theme_preview_overlay.xml
+  inflating: ui_xml/micro/theme_editor_overlay.xml
+  inflating: ui_xml/micro/controls_panel.xml
+  inflating: ui_xml/macro_panel.xml
+  inflating: ui_xml/setting_section_header.xml
+  inflating: ui_xml/printer_list_item.xml
+  inflating: ui_xml/print_file_detail.xml
+  inflating: ui_xml/wifi_network_item.xml
+  inflating: ui_xml/macro_param_modal.xml
+  inflating: ui_xml/wizard_ams_identify.xml
+  inflating: ui_xml/settings_panel.xml
+  inflating: ui_xml/performance_overlay.xml
+  inflating: ui_xml/styles.xml
+  inflating: ui_xml/wizard_header_bar.xml
+  inflating: ui_xml/power_panel.xml
+  inflating: ui_xml/ui_xml_gen.c
+   creating: ui_xml/micro_portrait/
+  inflating: ui_xml/micro_portrait/.gitkeep
+  inflating: ui_xml/theme_editor_overlay.xml
+  inflating: ui_xml/modal_dialog.xml
+  inflating: ui_xml/filament_product_edit_modal.xml
+  inflating: ui_xml/sensors_overlay.xml
+  inflating: ui_xml/klipper_recovery_dialog.xml
+  inflating: ui_xml/setting_detail_panel.xml
+  inflating: ui_xml/printer_image_overlay.xml
+  inflating: ui_xml/ams_context_menu.xml
+  inflating: ui_xml/home_panel.xml
+  inflating: ui_xml/wizard_heater_select.xml
+  inflating: ui_xml/fan_dial.xml
+  inflating: ui_xml/probe_accuracy_modal.xml
+  inflating: ui_xml/macro_buttons_overlay.xml
+  inflating: ui_xml/touch_calibration_overlay.xml
+  inflating: ui_xml/thermistor_configure_picker.xml
+  inflating: ui_xml/setting_led_chip_row.xml
+  inflating: ui_xml/CMakeLists.txt
+  inflating: ui_xml/print_status_nozzle_tool_picker.xml
+  inflating: ui_xml/print_completion_modal.xml
+  inflating: ui_xml/setting_dropdown_row.xml
+  inflating: ui_xml/chamber_temp_panel.xml
+  inflating: ui_xml/spoolman_settings.xml
+  inflating: ui_xml/icon.xml
+  inflating: ui_xml/tool_switcher_picker.xml
+  inflating: ui_xml/wifi_password_modal.xml
+  inflating: ui_xml/connecting_state.xml
+  inflating: ui_xml/setting_state_row.xml
+  inflating: ui_xml/carousel.xml
+  inflating: ui_xml/navigation_bar.xml
+  inflating: ui_xml/ams_recover_state_modal.xml
+  inflating: ui_xml/setting_macro_card.xml
+  inflating: ui_xml/ams_slot_view.xml
+  inflating: ui_xml/filament_sensor_indicator.xml
+  inflating: ui_xml/led_color_swatch.xml
+  inflating: ui_xml/color_sensor_row.xml
+  inflating: ui_xml/security_settings_overlay.xml
+  inflating: ui_xml/fan_rename_modal.xml
+  inflating: ui_xml/temp_display.xml
+  inflating: ui_xml/widget_catalog_overlay.xml
+  inflating: ui_xml/change_host_modal.xml
+  inflating: ui_xml/ams_device_section_detail.xml
+  inflating: ui_xml/probe_bltouch_panel.xml
+  inflating: ui_xml/about_settings_overlay.xml
+  inflating: ui_xml/ams_unit_card.xml
+  inflating: ui_xml/exclude_object_modal.xml
+  inflating: ui_xml/spoolman_panel.xml
+  inflating: ui_xml/ui_xml.h
+  inflating: ui_xml/history_list_panel.xml
+  inflating: ui_xml/macro_enhance_modal.xml
+  inflating: ui_xml/panel_belt_tension.xml
+  inflating: ui_xml/setting_form_macro_field.xml
+  inflating: ui_xml/crash_report_modal.xml
+  inflating: ui_xml/led_action_chip.xml
+  inflating: ui_xml/notification_history_item.xml
+  inflating: ui_xml/history_dashboard_panel.xml
+  inflating: ui_xml/fan_tokens.xml
+  inflating: ui_xml/wizard_telemetry.xml
+  inflating: ui_xml/fan_stack_picker.xml
+  inflating: ui_xml/favorite_macro_config_modal.xml
+  inflating: ui_xml/settings_plugins_overlay.xml
+  inflating: ui_xml/empty_state.xml
+  inflating: ui_xml/temp_graph_overlay.xml
+  inflating: ui_xml/timelapse_settings_overlay.xml
+  inflating: ui_xml/input_shaper_panel.xml
+  inflating: ui_xml/controls_panel.xml
+  inflating: ui_xml/label_printer_settings.xml
+  inflating: ui_xml/thermistor_sensor_picker.xml
+  inflating: ui_xml/qr_scanner_overlay.xml
+  inflating: ui_xml/globals.xml
+  inflating: ui_xml/history_list_row.xml
+  inflating: ui_xml/setting_form_input.xml
+  inflating: ui_xml/ams_loading_error_modal.xml
+  inflating: ui_xml/overlay_panel.xml
+   creating: ui_xml/portrait/
+  inflating: ui_xml/portrait/print_tune_panel.xml
+  inflating: ui_xml/portrait/print_status_panel.xml
+  inflating: ui_xml/portrait/app_layout.xml
+  inflating: ui_xml/portrait/navigation_bar.xml
+  inflating: ui_xml/screws_tilt_panel.xml
+  inflating: ui_xml/numeric_keypad_panel.xml
+  inflating: install.sh
++ ln -s /usr/data/zmod/zmod/moonraker.conf /usr/data/config/
++ sync
++ mkdir -p /usr/data/.mod/.zmod/root/printer_data/
++ cp /usr/data/update/mod/version.txt /usr/data/.mod/.zmod/root/printer_data/
++ sync
++ grep -q '/usr/data/config/mod/.shell/fix_config.sh start' /usr/prog/klipper/start.sh
++ grep -q /usr/data/config/mod/.shell/app_startup_mcu.sh /usr/prog/app_startup.sh
++ grep -q /usr/data/config/mod/.shell/prepare.sh /usr/prog/app_startup.sh
++ grep -q '/usr/data/zmod/zmod/.shell/fix_config.sh start' /usr/prog/klipper/start.sh
++ sed -i '2 i\/usr/data/zmod/zmod/.shell/fix_config.sh start' /usr/prog/klipper/start.sh
++ grep -q 'mount --bind /bin/echo /usr/bin/cmd_pwm' /usr/prog/app_startup.sh
++ sed -i '\#mount /usr/prog/etc /etc#a\mount --bind /bin/echo /usr/bin/cmd_pwm' /usr/prog/app_startup.sh
++ cat /usr/prog/app_startup.sh
++ awk '{ print }
+END {
+  if (NR > 0 && $0 !~ /\/usr\/data\/zmod\/zmod\/\.shell\/prepare\.sh/) {
+    print "/usr/data/zmod/zmod/.shell/prepare.sh"
+  }
+}' /tmp/startup.sh
++ sync
++ sync
++ sleep 10
++ sync
++ echo 'Patch was installed sucessfully!'
+Patch was installed sucessfully!
++ xzcat /usr/data/update/img/zmod-complete.raw.xz
++ sync
++ grep '^/dev/sd[ab12]* /mnt ' /proc/mounts
+/dev/sda1 /mnt vfat rw,relatime,fmask=0022,dmask=0022,codepage=936,iocharset=utf8,shortname=mixed,errors=remount-ro 0 0
++ rm -f /mnt/AD5X-zmod-full-1.7.5.tgz
++ sync
++ sleep 10
++ zreboot
++ sync
++ echo 1
++ sync
