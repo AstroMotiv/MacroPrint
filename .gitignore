@@ -6,6 +6,14 @@
 *.exe
 *.msi
 *.zip
+*.tgz
+*.tar.gz
+*.tar
+*.7z
+*.rar
+
+# Прошивки и бинарные дампы
+*Adventurer*
 
 # G-code и результаты слайсинга
 *.gcode
